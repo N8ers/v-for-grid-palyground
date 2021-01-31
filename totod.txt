@@ -1,0 +1,6 @@
+vue-custom-grid-generator (v-for-grid-generator)
+mission statement: allow for easy control custom grids, on iterated components
+- customize stragglers (left align, right align, center)
+- max-width (when does the grid stop populating & what does it do in that space? align center, stick left, stick right?)
+- custom break points (when to start new line)
+- alow grid flexing inbetween break points (grid shrink to certain % width)
