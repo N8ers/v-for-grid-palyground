@@ -1,15 +1,26 @@
 <template>
-  <div>
-    <v-for-grid />
+  <div v-if="slotTest"></div>
+  <div v-else>
+    <v-for-grid
+      :data="dummyData"
+      :gridProps="gridProps"
+    >
+      <Card :item="item" />
+    </v-for-grid>
 
-    data: {{dummyData}}
+    <!-- data: {{dummyData}} -->
 
     <hr />
-    <div v-for="data in dummyData" :key='data' class="card-container-basic">
+    <!-- <div v-for="data in dummyData" :key='data' class="card-container-basic">
       <Card :data=data />
-    </div>
+    </div> -->
   </div>
 </template>
+
+
+// I need to give VForGrid a props object (containing)
+// data
+
 
 <script>
 import VForGrid from '../lib/VForGrid'
@@ -25,11 +36,16 @@ export default {
   },
   data() {
     return {
+      slotTest: true
     }
   },
   computed: {
     dummyData() {
       return dummyData.data;
+    },
+    gridProps() {
+      let gridProps = { name: 'name', description: 'description' }
+      return gridProps;
     }
   }
 }

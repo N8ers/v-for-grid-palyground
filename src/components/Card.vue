@@ -1,8 +1,11 @@
 <template>
   <div class="card">
-    <div class="title">i am Card</div>
-    <div class="name">{{ data.name }}</div>
-    <div class="description">{{ data.description }}</div>
+    Hi :)
+    {{ item }}
+    <!-- {{ dataObj }} -->
+    <!-- <div class="title">i am Card</div>
+    <div class="name">{{ dataObj.name }}</div>
+    <div class="description">{{ dataObj.description }}</div> -->
   </div>
 </template>
 
@@ -10,10 +13,22 @@
 export default {
   name: 'card',
   props: {
-    data: {
-      type: Object,
-      default: () => {}
+    item: {
+      type: String,
+      default: 'me string'
     }
+    // dataObj: {
+    //   type: Object,
+    //   default: () => {}
+    // },
+    // name: {
+    //   type: String,
+    //   default: ''
+    // },
+    // description: {
+    //   type: String,
+    //   default: ''
+    // }
   }
 }
 </script>
